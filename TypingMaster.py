@@ -21,22 +21,22 @@ leaderboard = []
 #     return round(speed)
 
 
-# def typing_test():
-#     test = [
-#         "Hello I am Prathamesh Magar. I am from Parbhani, Maharashtra.",
-#         "Before you start your conversation, make sure you really know what you are going to talk about.",
-#         "Also, see to it that the person or people you are talking to is interested in what you are discussing."
-#     ]
+def typing_test():
+    test = [
+        "Hello I am Prathamesh Magar. I am from Parbhani, Maharashtra.",
+        "Before you start your conversation, make sure you really know what you are going to talk about.",
+        "Also, see to it that the person or people you are talking to is interested in what you are discussing."
+    ]
     
-#     test_sentence = r.choice(test)
+    test_sentence = r.choice(test)
 
-#     print("***** Typing Master *****")
-#     print(test_sentence)
-#     print()
+    print("***** Typing Master *****")
+    print(test_sentence)
+    print()
 
-#     time_start = time()
-#     user_input = input("Enter: ")
-#     time_end = time()
+    time_start = time()
+    user_input = input("Enter: ")
+    time_end = time()
 
 #     speed = speed_time(time_start, time_end, user_input)
 #     error = mistake(test_sentence, user_input)
