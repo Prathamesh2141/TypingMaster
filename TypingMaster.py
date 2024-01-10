@@ -1,5 +1,5 @@
 from time import time
-# import random as r
+import random as r
 
 # leaderboard = []
 
