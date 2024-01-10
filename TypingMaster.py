@@ -1,7 +1,7 @@
 from time import time
 import random as r
 
-# leaderboard = []
+leaderboard = []
 
 # def mistake(paratest, usertest):
 #     error = 0
