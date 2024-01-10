@@ -64,14 +64,14 @@ while True:
     print("2. Show Leaderboard")
     print("3. Exit")
 
-    # choice = input("Enter your choice (1/2/3): ")
+    choice = input("Enter your choice (1/2/3): ")
 
-    # if choice == "1":
-    #     typing_test()
-    # elif choice == "2":
-    #     show_leaderboard()
-    # elif choice == "3":
-    #     print("Exiting the program.")
-    #     break
-    # else:
-    #     print("Invalid choice. Please enter 1, 2, or 3.")
+    if choice == "1":
+        typing_test()
+    elif choice == "2":
+        show_leaderboard()
+    elif choice == "3":
+        print("Exiting the program.")
+        break
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")
