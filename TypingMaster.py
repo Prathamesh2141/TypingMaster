@@ -1,5 +1,6 @@
 from time import time
 import random as r
+from colorama import Fore, Style  # Import necessary modules from colorama
 
 leaderboard = []
 
@@ -41,7 +42,7 @@ def typing_test():
     
     test_sentence = r.choice(test)
 
-    print("***** Typing Master *****")
+    print(Fore.GREEN + "***** Typing Master *****" + Style.RESET_ALL)
     print(test_sentence)
     print()
 
@@ -52,16 +53,16 @@ def typing_test():
     metrics = typing_metrics(time_start, time_end, user_input)
     error = mistake(test_sentence, user_input)
 
-    print("Words Typed:", metrics["Words Typed"])
-    print("Time Taken:", metrics["Time Taken (s)"], "seconds")
-    print("Words Per Minute (WPM):", metrics["Words Per Minute (WPM)"])
-    print("Error:", error)
+    print(Fore.CYAN + "Words Typed:" + Style.RESET_ALL, metrics["Words Typed"])
+    print(Fore.CYAN + "Time Taken:" + Style.RESET_ALL, metrics["Time Taken (s)"], "seconds")
+    print(Fore.CYAN + "Words Per Minute (WPM):" + Style.RESET_ALL, metrics["Words Per Minute (WPM)"])
+    print(Fore.RED + "Error:" + Style.RESET_ALL, error)
 
     username = input("Enter your username for the leaderboard: ")
     leaderboard.append({"Username": username, "Speed": metrics["Words Per Minute (WPM)"], "Error": error})
 
 def show_leaderboard():
-    print("***** Leaderboard *****")
+    print(Fore.YELLOW + "***** Leaderboard *****" + Style.RESET_ALL)
     if not leaderboard:
         print("Leaderboard is empty.")
     else:
@@ -69,6 +70,7 @@ def show_leaderboard():
         for idx, entry in enumerate(sorted_leaderboard, start=1):
             print(f"{idx}. {entry['Username']} - Speed: {entry['Speed']} WPM, Error: {entry['Error']}")
 
+# Main program loop
 while True:
     print("\nOptions:")
     print("1. Start Typing Test")
@@ -85,4 +87,4 @@ while True:
         print("Exiting the program.")
         break
     else:
-        print("Invalid choice. Please enter 1, 2, or 3.")
+        print(Fore.RED + "Invalid choice. Please enter 1, 2, or 3." + Style.RESET_ALL)
