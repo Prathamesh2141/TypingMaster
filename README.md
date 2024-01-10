@@ -18,9 +18,8 @@ Choose option 1 to begin a typing test.
 A random sentence will be displayed for you to type accurately and swiftly.
 Your typing speed and error count will be calculated and displayed at the end.
 
-![image](https://github.com/Prathamesh2141/TypingMaster/assets/119419554/5d24ed54-35d3-46d5-a150-01aa63aa4084)
+![image](https://github.com/Prathamesh2141/TypingMaster/assets/119419554/918a3eec-0c12-47b6-b231-31ef0c71b67e)
 
-![image](https://github.com/Prathamesh2141/TypingMaster/assets/119419554/fd87e3cf-5e91-4f80-86a2-0604788cc230)
 
 
 Show Leaderboard 🏆
@@ -28,8 +27,8 @@ Show Leaderboard 🏆
 Select option 2 to view the leaderboard and see how you stack up against other players.
 The leaderboard showcases usernames, typing speeds, and error counts.
 
+![image](https://github.com/Prathamesh2141/TypingMaster/assets/119419554/89f436b0-3950-4a56-96f6-38c1a54d9b96)
 
-![image](https://github.com/Prathamesh2141/TypingMaster/assets/119419554/63711f2c-84d3-4212-9e3b-c728f767367b)
 
 
 
