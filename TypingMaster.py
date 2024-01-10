@@ -38,14 +38,14 @@ def typing_test():
     user_input = input("Enter: ")
     time_end = time()
 
-#     speed = speed_time(time_start, time_end, user_input)
-#     error = mistake(test_sentence, user_input)
+    speed = speed_time(time_start, time_end, user_input)
+    error = mistake(test_sentence, user_input)
 
-#     print("Speed:", speed, "w/sec")
-#     print("Error:", error)
+    print("Speed:", speed, "w/sec")
+    print("Error:", error)
 
-#     username = input("Enter your username for the leaderboard: ")
-#     leaderboard.append({"Username": username, "Speed": speed, "Error": error})
+    username = input("Enter your username for the leaderboard: ")
+    leaderboard.append({"Username": username, "Speed": speed, "Error": error})
 
 
 def show_leaderboard():
