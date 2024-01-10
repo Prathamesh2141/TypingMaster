@@ -29,7 +29,8 @@ Select option 2 to view the leaderboard and see how you stack up against other p
 The leaderboard showcases usernames, typing speeds, and error counts.
 
 
-![image](https://github.com/Prathamesh2141/TypingMaster/assets/119419554/667d620f-276c-4f9c-ab52-86304d114a76)
+![image](https://github.com/Prathamesh2141/TypingMaster/assets/119419554/63711f2c-84d3-4212-9e3b-c728f767367b)
+
 
 
 
