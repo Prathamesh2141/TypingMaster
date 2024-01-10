@@ -48,14 +48,14 @@ def typing_test():
 #     leaderboard.append({"Username": username, "Speed": speed, "Error": error})
 
 
-# def show_leaderboard():
-#     print("***** Leaderboard *****")
-#     if not leaderboard:
-#         print("Leaderboard is empty.")
-#     else:
-#         sorted_leaderboard = sorted(leaderboard, key=lambda x: x["Speed"], reverse=True)
-#         for idx, entry in enumerate(sorted_leaderboard, start=1):
-#             print(f"{idx}. {entry['Username']} - Speed: {entry['Speed']} w/sec, Error: {entry['Error']}")
+def show_leaderboard():
+    print("***** Leaderboard *****")
+    if not leaderboard:
+        print("Leaderboard is empty.")
+    else:
+        sorted_leaderboard = sorted(leaderboard, key=lambda x: x["Speed"], reverse=True)
+        for idx, entry in enumerate(sorted_leaderboard, start=1):
+            print(f"{idx}. {entry['Username']} - Speed: {entry['Speed']} w/sec, Error: {entry['Error']}")
 
 
 # while True:
