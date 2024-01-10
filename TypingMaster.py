@@ -5,21 +5,32 @@ leaderboard = []
 
 def mistake(paratest, usertest):
     error = 0
-    for i in range(len(paratest)):
-        try:
-            if(paratest[i] != usertest[i]):
-                error += 1
-        except:
+    min_len = min(len(paratest), len(usertest))
+    
+    for i in range(min_len):
+        if paratest[i] != usertest[i]:
             error += 1
+
+    error += abs(len(paratest) - len(usertest))
+    
     return error
 
+def typing_metrics(time_start, time_end, user_input):
+    # Calculate time delay
+    time_delay = time_end - time_start
+    time_taken = round(time_delay, 2)
 
-def speed_time(time_s, time_e, userInput):
-    time_delay = time_e - time_s
-    time_r = round(time_delay, 2)
-    speed = len(userInput) / time_r
-    return round(speed)
+    # Calculate words typed
+    words_typed = len(user_input.split())
 
+    # Calculate words per minute (WPM)
+    words_per_minute = round((words_typed / time_taken) * 60, 2)
+
+    return {
+        "Words Typed": words_typed,
+        "Time Taken (s)": time_taken,
+        "Words Per Minute (WPM)": words_per_minute
+    }
 
 def typing_test():
     test = [
@@ -38,15 +49,16 @@ def typing_test():
     user_input = input("Enter: ")
     time_end = time()
 
-    speed = speed_time(time_start, time_end, user_input)
+    metrics = typing_metrics(time_start, time_end, user_input)
     error = mistake(test_sentence, user_input)
 
-    print("Speed:", speed, "w/sec")
+    print("Words Typed:", metrics["Words Typed"])
+    print("Time Taken:", metrics["Time Taken (s)"], "seconds")
+    print("Words Per Minute (WPM):", metrics["Words Per Minute (WPM)"])
     print("Error:", error)
 
     username = input("Enter your username for the leaderboard: ")
-    leaderboard.append({"Username": username, "Speed": speed, "Error": error})
-
+    leaderboard.append({"Username": username, "Speed": metrics["Words Per Minute (WPM)"], "Error": error})
 
 def show_leaderboard():
     print("***** Leaderboard *****")
@@ -55,8 +67,7 @@ def show_leaderboard():
     else:
         sorted_leaderboard = sorted(leaderboard, key=lambda x: x["Speed"], reverse=True)
         for idx, entry in enumerate(sorted_leaderboard, start=1):
-            print(f"{idx}. {entry['Username']} - Speed: {entry['Speed']} w/sec, Error: {entry['Error']}")
-
+            print(f"{idx}. {entry['Username']} - Speed: {entry['Speed']} WPM, Error: {entry['Error']}")
 
 while True:
     print("\nOptions:")
