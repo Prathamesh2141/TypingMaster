@@ -3,22 +3,22 @@ import random as r
 
 leaderboard = []
 
-# def mistake(paratest, usertest):
-#     error = 0
-#     for i in range(len(paratest)):
-#         try:
-#             if(paratest[i] != usertest[i]):
-#                 error += 1
-#         except:
-#             error += 1
-#     return error
+def mistake(paratest, usertest):
+    error = 0
+    for i in range(len(paratest)):
+        try:
+            if(paratest[i] != usertest[i]):
+                error += 1
+        except:
+            error += 1
+    return error
 
 
-# def speed_time(time_s, time_e, userInput):
-#     time_delay = time_e - time_s
-#     time_r = round(time_delay, 2)
-#     speed = len(userInput) / time_r
-#     return round(speed)
+def speed_time(time_s, time_e, userInput):
+    time_delay = time_e - time_s
+    time_r = round(time_delay, 2)
+    speed = len(userInput) / time_r
+    return round(speed)
 
 
 def typing_test():
